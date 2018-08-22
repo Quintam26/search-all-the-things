@@ -41,7 +41,7 @@ class Results extends Component {
         });
       });
     };
-
+    // refactor both of these getter methods - just combine
     get searchPage() {
       const { location } = this.props;
       const { page } = qs.parse(location.search);
@@ -53,7 +53,7 @@ class Results extends Component {
       const { search } = qs.parse(location.search);
       return search;
     }
-
+    
     searchMovies() {
       const { perPage } = this.state;
       const page = parseInt(this.searchPage);
